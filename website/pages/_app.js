@@ -1,5 +1,5 @@
 import React from 'react';
-import '.nextra/styles.css';
+import 'nextra-theme-docs/style.css';
 import GoogleFonts from 'next-google-fonts';
 
 export default function Nextra({ Component, pageProps }) {

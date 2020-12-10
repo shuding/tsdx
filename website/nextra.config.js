@@ -7,7 +7,21 @@ export default {
   logo: (
     <>
       <Logo height={36} />
-      <span className=" font-extrabold hidden md:inline sr-only">TSDX</span>
+      <span className="title">TSDX</span>
+      <style jsx>{`
+        .title {
+          display: none;
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0,0,0,0);
+          white-space: nowrap;
+          border-width: 0;
+        }
+      `}</style>
     </>
   ),
   head: () => (
@@ -62,7 +76,8 @@ export default {
       /> */}
     </>
   ),
-  footer: ({ filepath }) => (
+  footerEditOnGitHubLink: true,
+  footerText: () => (
     <>
       <div className="mt-24 flex justify-between flex-col-reverse md:flex-row items-center md:items-end">
         <a
@@ -72,18 +87,6 @@ export default {
           className="inline-flex items-center no-underline text-current font-semibold"
         >
           <span className="mr-1">A Jared Palmer Project</span>
-        </a>
-        <div className="mt-6" />
-        <a
-          className="text-sm"
-          href={
-            'https://github.com/formium/tsdx/tree/master/website/pages' +
-            filepath
-          }
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Edit this page on GitHub
         </a>
       </div>
     </>
